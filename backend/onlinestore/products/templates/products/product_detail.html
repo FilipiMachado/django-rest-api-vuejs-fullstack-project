@@ -11,8 +11,8 @@
     <p>Manufacturer: {{ object.manufacturer }}</p>
     <p>Quantity: {{ object.quantity }}</p>
     <p>Description: {{ object.description }}</p>
-    <p>Price: {{ object.price }}</p>
-    <p>Shipping Cost: {{ object.shipping_cost }} Dollars</p>
+    <p>Price: ${{ object.price }}</p>
+    <p>Shipping Cost: ${{ object.shipping_price }} Dollars</p>
 
     <img src="{{ object.photo.url }}" alt="product image"/>
   </body>

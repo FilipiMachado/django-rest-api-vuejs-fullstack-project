@@ -5,8 +5,6 @@ from news.models import Article, Journalist
 
 class ArticleSerializer(serializers.ModelSerializer):
     time_since_publication = serializers.SerializerMethodField()
-    # author = JournalistSerializer()
-    # author = serializers.StringRelatedField()
     
     class Meta:
         model = Article
@@ -32,7 +30,6 @@ class ArticleSerializer(serializers.ModelSerializer):
     
 class JournalistSerializer(serializers.ModelSerializer):
     articles = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name="article-detail")
-    # articles = ArticleSerializer(many=True, read_only=True)
     
     class Meta:
         model = Journalist
